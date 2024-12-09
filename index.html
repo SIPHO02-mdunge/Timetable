@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable with Undo and Edit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Timetable Manager</h1>
+
+        <div class="form-container">
+            <label for="teacher">Teacher Name:</label>
+            <input type="text" id="teacher" placeholder="Enter teacher name">
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" placeholder="Enter subject">
+
+            <label for="class">Class:</label>
+            <input type="text" id="class" placeholder="Enter class (e.g., 10A, 11B)">
+
+            <label for="day">Day:</label>
+            <select id="day">
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+            </select>
+
+            <label for="time-slot">Time Slot:</label>
+            <select id="time-slot"></select>
+
+            <button id="add-button">Add to Timetable</button>
+            <button id="undo-button">Undo Last</button>
+        </div>
+
+        <h2>Weekly Timetable</h2>
+        <table id="timetable">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
